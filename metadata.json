@@ -1,0 +1,6 @@
+{
+  "name": "Aura Social",
+  "description": "A next-generation social platform featuring atmospheric design, glassmorphic UI, and AI-powered interactions.",
+  "requestFramePermissions": ["camera"],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

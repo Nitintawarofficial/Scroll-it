@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Outfit:wght@600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Outfit", sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-white text-gray-900 antialiased selection:bg-blue-100;
+    font-family: var(--font-sans);
+  }
+
+  /* Dark mode support */
+  @media (prefers-color-scheme: dark) {
+    body {
+      @apply bg-[#050505] text-gray-100;
+    }
+  }
+}
+
+@layer components {
+  .classic-card {
+    @apply bg-white dark:bg-black border border-[#dbdbdb] dark:border-[#262626] rounded-sm shadow-none;
+  }
+  
+  .classic-nav {
+    @apply bg-white dark:bg-black border-b border-[#dbdbdb] dark:border-[#262626];
+  }
+
+  .btn-primary {
+    @apply px-4 py-1.5 rounded-lg bg-[#0095f6] hover:bg-[#1877f2] text-white font-semibold text-sm transition-all active:opacity-70;
+  }
+
+  .btn-ghost {
+    @apply px-4 py-2 rounded-lg hover:bg-gray-50 dark:hover:bg-white/5 transition-all text-sm font-semibold;
+  }
+
+  /* Hide scrollbar but allow scrolling */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+  .no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+}
